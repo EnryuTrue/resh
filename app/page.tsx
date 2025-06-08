@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { BarChart3, Filter, Share2, Users, Database, Zap, CheckCircle, Loader2, ArrowRight } from "lucide-react"
+import { BarChart3, Filter, Share2, Users, Database, Zap, CheckCircle, Loader2, ArrowRight, Brain } from "lucide-react"
 import Link from "next/link"
 import { subscribeToWaitlist } from "./actions"
 import { useActionState } from "react" // Updated import
@@ -131,13 +131,12 @@ export default function LandingPage() {
               </Badge>
 
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-slate-900 leading-tight">
-                Turn Your Charts Into
-                <span className="text-emerald-600 block">Interactive Apps</span>
+                Turn Your Data Into
+                <span className="text-emerald-600 block">Interactive Graph</span>
               </h1>
 
               <p className="text-xl text-slate-600 max-w-2xl leading-relaxed">
-                Create chart templates, connect your data, add filters, and share as interactive apps. Your clients get
-                live, filterable dashboards without the complexity.
+                Easily build interactive graph app for your clients to explore data lively.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4 w-full max-w-md">
@@ -185,6 +184,16 @@ export default function LandingPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Brain className="h-6 w-6 text-emerald-600" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-slate-900 mb-2">AI-Powered Insights</h3>
+                  <p className="text-slate-600">Leverage AI to transform raw data into meaningful interactive visualizations.</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Database className="h-6 w-6 text-emerald-600" />
                 </div>
                 <div>
@@ -230,16 +239,6 @@ export default function LandingPage() {
                 <div>
                   <h3 className="text-lg font-semibold text-slate-900 mb-2">Easy Sharing</h3>
                   <p className="text-slate-600">Share via simple links - no accounts needed for viewers.</p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Filter className="h-6 w-6 text-emerald-600" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-slate-900 mb-2">Custom Filters</h3>
-                  <p className="text-slate-600">Let clients filter by date, category, region, or any field.</p>
                 </div>
               </div>
             </div>
