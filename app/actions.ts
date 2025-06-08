@@ -25,14 +25,14 @@ export async function subscribeToWaitlist(prevState: FormState, formData: FormDa
 
   try {
     // Store email in waitlist first
-    await addToWaitlist(email)
+    // await addToWaitlist(email) // Removed email saving
 
     // Check if we have a Resend API key
     if (!process.env.RESEND_API_KEY) {
-      console.log(`New waitlist signup: ${email} (Email sending disabled - no API key)`)
+      console.log(`Pretended waitlist signup: ${email} (Email sending disabled - no API key)`)
       return {
         success: true,
-        message: "You've been added to our waitlist! We'll notify you when we launch.",
+        message: "You've been notionally added to our waitlist! We'll notify you when we launch.", // Updated message
         email,
       }
     }
